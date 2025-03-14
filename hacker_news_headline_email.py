@@ -32,6 +32,27 @@ rawContent = getNews('https://news.ycombinator.com/')
 content += rawContent
 content += ('<br>------<br><br>End of Message!')
 
+#Lets Send the email
+
+print('Composing the Email...')
+
+# update your email details
+SERVER = 'smtp.gmail.com' # AS our smtp server
+PORT = '587' #port number
+FROM = 'zamad.shakeel.01@gmail.com' #your email
+TO = 'zamad.shakeel.01@gmail.com' #reciever email
+PASS = 'Pakistan5050.'
+
+Server = smtplib.SMTP(SERVER, PORT)
+Server.set_debuglevel(1)
+Server.ehlo()
+Server.starttls()
+Server.login(FROM, PASS)
+Server.sendmail(FROM, TO, content.as_string())
+
+print('Email Sent...')
+Server.quit()
+
 
 
 
