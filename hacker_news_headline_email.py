@@ -40,8 +40,8 @@ print('Composing the Email...')
 SERVER = 'smtp.gmail.com' # AS our smtp server
 PORT = '587' #port number
 FROM = 'zamad.shakeel.01@gmail.com' #your email
-TO = 'zamad.shakeel.01@gmail.com' #reciever email
-PASS = 'Pakistan5050.'
+TO = 'zamadshakil@gmail.com' #reciever email
+PASS = '********'
 
 Server = smtplib.SMTP(SERVER, PORT)
 Server.set_debuglevel(1)
